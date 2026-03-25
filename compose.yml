@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    labels:
+    - "traefik.enable=true"
+    - "traefik.docker.network=traefik_default"
+    - "traefik.http.routers.lccc.rule=Host(`lccc.lu`)"
+    - "traefik.http.routers.lccc.entrypoints=websecure"
+    - "traefik.http.routers.lccc.tls=true"
+    - "traefik.http.routers.lccc.tls.certresolver=letsencrypt"
+    - "traefik.http.services.lccc.loadbalancer.server.port=80"
