@@ -1,14 +1,21 @@
 services:
   web:
-    build: .
-    ports:
-      - "80:80"
-    restart: unless-stopped
+    image: nginx:alpine
+    container_name: lccc_web
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+    restart: always
+    networks:
+      - traefik_default
     labels:
-    - "traefik.enable=true"
-    - "traefik.docker.network=traefik_default"
-    - "traefik.http.routers.lccc.rule=Host(`lccc.lu`)"
-    - "traefik.http.routers.lccc.entrypoints=websecure"
-    - "traefik.http.routers.lccc.tls=true"
-    - "traefik.http.routers.lccc.tls.certresolver=letsencrypt"
-    - "traefik.http.services.lccc.loadbalancer.server.port=80"
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_default"
+      - "traefik.http.routers.lccc.rule=Host(`lccc.lu`)"
+      - "traefik.http.routers.lccc.entrypoints=websecure"
+      - "traefik.http.routers.lccc.tls=true"
+      - "traefik.http.routers.lccc.tls.certresolver=letsencrypt"
+      - "traefik.http.services.lccc.loadbalancer.server.port=80"
+
+networks:
+  traefik_default:
+    external: true
