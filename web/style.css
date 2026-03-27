@@ -335,3 +335,57 @@ body {
   object-fit: contain;
   transition: filter 0.2s;
 }
+
+/* TICKET EMBED */
+.tt-embed-wrapper {
+  margin-top: 40px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* 5-column ticket grid */
+.tickets-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* PARTNERS SECTION */
+.partners-section {
+  background: #4b2d8f;
+  padding: 56px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-title-white {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.scroller-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logos-scroller {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  width: max-content;
+  animation: scroll-logos 18s linear infinite;
+}
+
+.partner-logo {
+  max-height: 160px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-logos {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

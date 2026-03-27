@@ -1,0 +1,17 @@
+<!-- PARTNERS & SPONSORS -->
+    <section class="partners-section">
+        <div class="section-title-white">Partners &amp; Sponsors</div>
+        <div class="scroller-wrapper">
+            <div class="logos-scroller">
+                <!-- duplicated for seamless loop -->
+                <img src="img/tcgs/magic.png" alt="Magic" class="partner-logo" />
+                <img src="img/tcgs/onePiece.webp" alt="One Piece" class="partner-logo" />
+                <img src="img/tcgs/Yugioh_Logo.webp" alt="Yu-Gi-Oh" class="partner-logo" />
+                <img src="img/tcgs/Pokémon_Trading_Card_Game_logo.svg.png" alt="Pokémon" class="partner-logo" />
+                <img src="img/tcgs/magic.png" alt="Magic" class="partner-logo" />
+                <img src="img/tcgs/onePiece.webp" alt="One Piece" class="partner-logo" />
+                <img src="img/tcgs/Yugioh_Logo.webp" alt="Yu-Gi-Oh" class="partner-logo" />
+                <img src="img/tcgs/Pokémon_Trading_Card_Game_logo.svg.png" alt="Pokémon" class="partner-logo" />
+            </div>
+        </div>
+    </section>
