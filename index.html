@@ -121,10 +121,10 @@
     </section>
 
     <!-- ============================================================= -->
-    <!-- IMPRESSIONS FROM THE LAST EVENT                               -->
-    <!-- To swap a photo, drop a new file in /img/home/ and update the -->
-    <!-- src + caption below. Add or remove .gallery-item blocks as    -->
-    <!-- needed.                                                       -->
+    <!-- IMPRESSIONS FROM THE LAST EVENT (carousel / slideshow)        -->
+    <!-- To add/remove a photo, drop a file in /img/home/ and add or   -->
+    <!-- remove a .carousel-slide <img> below. The dots and navigation -->
+    <!-- adapt automatically (handled in script.js).                   -->
     <!-- ============================================================= -->
     <section class="section">
         <div class="section-title">Impressions From The Last Event</div>
@@ -132,31 +132,24 @@
             A look back at the highlights from our previous edition — the packed show floor, epic trades and
             the unbeatable community atmosphere. Here's a taste of what awaits you in 2026.
         </p>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="img/home/img1.jpg" alt="Packed show floor at LCCC" />
-                <div class="gallery-caption">Packed Show Floor</div>
+
+        <div class="carousel" id="impressions-carousel">
+            <div class="carousel-track">
+                <img class="carousel-slide" src="img/home/ambiente.jpg" alt="LCCC event impression 1" />
+                <img class="carousel-slide" src="img/home/cards.jpg" alt="LCCC event impression 2" />
+                <img class="carousel-slide" src="img/home/quality.jpg" alt="LCCC event impression 3" />
+                <img class="carousel-slide" src="img/home/vendors.jpg" alt="LCCC event impression 4" />
+                <img class="carousel-slide" src="img/home/vendors2.jpg" alt="LCCC event impression 5" />
+                <img class="carousel-slide" src="img/home/cardswatch.jpg" alt="LCCC event impression 6" />
+                <img class="carousel-slide" src="img/home/tables.jpg" alt="LCCC event impression 7" />
+                <img class="carousel-slide" src="img/home/trading.jpg" alt="LCCC event impression 8" />
+                <img class="carousel-slide" src="img/home/overview.jpg" alt="LCCC event impression 9" />
             </div>
-            <div class="gallery-item">
-                <img src="img/home/img2.jpg" alt="Collectors trading cards" />
-                <div class="gallery-caption">Trading &amp; Deals</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/home/img3.jpg" alt="The VAULT high value card exhibit" />
-                <div class="gallery-caption">The VAULT Exhibit</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/home/img4.jpg" alt="Pack battles in action" />
-                <div class="gallery-caption">Pack Battles</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/home/img5.jpg" alt="Vendor tables full of cards" />
-                <div class="gallery-caption">Vendor Tables</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/home/img6.jpg" alt="Community enjoying the event" />
-                <div class="gallery-caption">Community Vibes</div>
-            </div>
+
+            <button class="carousel-btn carousel-prev" aria-label="Previous image">&#10094;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next image">&#10095;</button>
+
+            <div class="carousel-dots" aria-label="Slide navigation"></div>
         </div>
     </section>
 
