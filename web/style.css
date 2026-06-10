@@ -10,6 +10,140 @@ body {
   background: #f5f5f5;
 }
 
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #4b2d8f;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.nav-brand img {
+  height: 38px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #e9e2ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 22px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.nav-links a.active {
+  background: #f5c518;
+  color: #3a1f7a;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+}
+
+/* PAGE HEADER (sub pages) */
+.page-header {
+  background: #4b2d8f;
+  color: #fff;
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.page-header p {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* SITE FOOTER */
+.site-footer {
+  background: #2d1660;
+  color: #d8cdf2;
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #f5c518;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
 /* LOGO BAR */
 .logo-bar {
   display: flex;
@@ -388,4 +522,114 @@ body {
 @keyframes scroll-logos {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+/* SHOPS GRID */
+.shops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.shop-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(75, 45, 143, 0.18);
+}
+
+.shop-logo {
+  height: 90px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.shop-card h3 {
+  font-size: 1.05rem;
+  color: #4b2d8f;
+  margin-bottom: 6px;
+}
+
+.shop-card p {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* CONTACT */
+.contact-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  display: grid;
+  gap: 20px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-row .contact-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.contact-row h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.contact-row p,
+.contact-row a {
+  font-size: 0.92rem;
+  color: #777;
+  text-decoration: none;
+}
+
+.contact-row a:hover {
+  color: #4b2d8f;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  background: #4b2d8f;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.socials a:hover {
+  background: #3a1f7a;
+}
+
+/* INTRO TEXT BLOCK */
+.intro-text {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
 }
